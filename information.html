@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('https://www.shutterstock.com/image-photo/donation-jar-copy-space-fundraiser-260nw-656980429.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: black;
+        }
+        label {
+            font-size: 20px;
+            color: black;
+        }
+        input {
+            width: 50%;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid black;
+            margin: 10px 0;
+        }
+        button {
+            width: 10%;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid black;
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Donate Items</h1>
+    <form method="POST" action="/information">
+        <label>Enter your name</label>
+        <input type="text" name="name" placeholder="Enter your name">
+        <br>
+        <label>Enter your email</label>
+        <input type="email" name="email" placeholder="Enter your email">
+        <br>
+        <label>Enter your phone number</label>
+        <input type="tel" name="phone" placeholder="Enter your phone number">
+        <br>
+        <label>Enter your message</label>
+        <input type="text" name="message" placeholder="Enter your message">
+        <br>
+       <label>Enter your amount</label>
+        <input type="text" name="amount" placeholder="Enter your amount">
+        <br>
+        <button type="submit">Submit</button>
+        <h2>Thank you for your donation</h2>
+        <h2>The amount is send to the charity for more detailes we contact you</h2>
+    </form>
+    <br>
+    <a href="{{ url_for('register') }}">Go to Register Page</a>
+</body>
+</html>
